@@ -16,22 +16,49 @@ st.caption("Chatbot untuk membantu Anda merencanakan investasi berdasarkan profi
 
 # --- 2. Sidebar untuk Pengaturan ---
 
+# with st.sidebar:
+#     st.subheader("Pengaturan API")
+    
+#     # Input untuk Google AI API Key
+#     google_api_key = st.text_input("Google AI API Key", type="password", help="Dapatkan kunci API Anda dari Google AI Studio.")
+    
+#     # Input untuk Exa API Key
+#     exa_api_key = st.text_input("Exa API Key", type="password", help="Dapatkan kunci API Anda dari dashboard Exa.")
+    
+#     st.markdown("---")
+    
+#     # Tombol untuk mereset percakapan
+#     if st.button("Reset Percakapan", help="Mulai percakapan baru dari awal"):
+#         st.session_state.pop("agent", None)
+#         st.session_state.pop("messages", None)
+#         st.rerun()
+
 with st.sidebar:
-    st.subheader("Pengaturan API")
+    st.subheader("Menu")
+    st.markdown("""
+    Aplikasi ini ditenagai oleh **Google Gemini** dan **Exa Search**. 
     
-    # Input untuk Google AI API Key
-    google_api_key = st.text_input("Google AI API Key", type="password", help="Dapatkan kunci API Anda dari Google AI Studio.")
-    
-    # Input untuk Exa API Key
-    exa_api_key = st.text_input("Exa API Key", type="password", help="Dapatkan kunci API Anda dari dashboard Exa.")
+    Cukup mulai percakapan untuk mendapatkan analisis investasi pribadi Anda.
+    """)
     
     st.markdown("---")
     
-    # Tombol untuk mereset percakapan
+    # Tombol untuk mereset percakapan tetap di sini
     if st.button("Reset Percakapan", help="Mulai percakapan baru dari awal"):
-        st.session_state.pop("agent", None)
-        st.session_state.pop("messages", None)
+        # Hapus state yang relevan untuk reset
+        for key in list(st.session_state.keys()):
+            if key in ['agent', 'messages']:
+                del st.session_state[key]
         st.rerun()
+
+# Kode untuk mengambil API keys sekarang ada di sini.
+try:
+    google_api_key = st.secrets["GOOGLE_API_KEY"]
+    exa_api_key = st.secrets["EXA_API_KEY"]
+except KeyError:
+    st.error("🛑 API Key tidak ditemukan. Mohon pastikan file `.streamlit/secrets.toml` Anda sudah benar.")
+    st.info("File `secrets.toml` harus berisi:\n\n`GOOGLE_API_KEY = '...'`\n`EXA_API_KEY = '...'`")
+    st.stop()
 
 # --- 3. Definisi Tools untuk AI ---
 exa = Exa(api_key = exa_api_key)
