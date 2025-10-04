@@ -188,6 +188,7 @@ if ("agent" not in st.session_state) or (getattr(st.session_state, "_last_google
         LANGKAH 2: Analisis dan Penggunaan Tools.
         - Setelah SEMUA pertanyaan di atas terjawab, rangkum profil pengguna yang telah Anda pahami.
         - SEKARANG, Anda boleh menggunakan tools yang tersedia.
+        - Gunakan `search_the_web` untuk mengetahui hari ini tanggal berapa, bulan apa dan tahun berapa
         - Gunakan `search_the_web` untuk mencari kondisi ekonomi makro saat ini, tren sektor yang relevan, atau informasi tentang produk investasi (misal: reksadana).
         - Gunakan `search_the_web` untuk mencari harga emas per gram dalam Rupiah, serta harga logam atau komoditas lain jika relevan.
         - Gunakan `get_stock_price` dan `get_crypto_price` untuk memeriksa harga terkini instrumen yang Anda pertimbangkan.
