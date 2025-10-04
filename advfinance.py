@@ -151,7 +151,7 @@ if not google_api_key or not exa_api_key:
     st.stop()
 
 # Gabungkan semua tools ke dalam satu list
-tools = [search_the_web, get_stock_price, get_crypto_price, get_gold_price]
+tools = [search_the_web, get_stock_price, get_crypto_price]
 
 # Inisialisasi agent hanya jika belum ada atau API key berubah
 if ("agent" not in st.session_state) or (getattr(st.session_state, "_last_google_key", None) != google_api_key):
