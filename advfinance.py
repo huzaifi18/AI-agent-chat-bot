@@ -131,7 +131,7 @@ def get_crypto_price(crypto_symbol: str):
         return f"Error saat mengambil data kripto: {e}"
 
 # Tool 4: Mendapatkan Harga Emas
-@tool
+# @tool
 # def get_gold_price():
 #     """
 #     Mendapatkan harga emas terkini di pasar global (berdasarkan ETF GLD).
