@@ -53,8 +53,8 @@ with st.sidebar:
 
 # Kode untuk mengambil API keys sekarang ada di sini.
 try:
-    google_api_key = st.secrets["GOOGLE_API_KEY"]
-    exa_api_key = st.secrets["EXA_API_KEY"]
+    google_api_key = st.secrets["GEMINI"]
+    exa_api_key = st.secrets["EXA"]
 except KeyError:
     st.error("🛑 API Key tidak ditemukan. Mohon pastikan file `.streamlit/secrets.toml` Anda sudah benar.")
     st.info("File `secrets.toml` harus berisi:\n\n`GOOGLE_API_KEY = '...'`\n`EXA_API_KEY = '...'`")
