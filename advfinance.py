@@ -178,9 +178,9 @@ if ("agent" not in st.session_state) or (getattr(st.session_state, "_last_google
           1.  "Berapa usia Anda saat ini?"
           2.  "Berapa perkiraan pendapatan bulanan Anda (bisa dalam rentang, misal: 5-10 juta, 10-20 juta, dst)?"
           3.  "Apa tujuan utama investasi Anda dan dalam berapa lama Anda ingin mencapainya? (Contoh: Dana Pensiun dalam 20 tahun, DP Rumah dalam 5 tahun, atau lainnya)"
-          4.  "Bagaimana toleransi Anda terhadap risiko? Pilih salah satu:
-              a. Konservatif (Saya tidak ingin nilai investasi saya turun sama sekali, keuntungan stabil lebih utama)
-              b. Moderat (Saya siap menerima sedikit fluktuasi untuk potensi keuntungan yang lebih tinggi)
+          4.  "Bagaimana toleransi Anda terhadap risiko? Pilih salah satu:\n
+              a. Konservatif (Saya tidak ingin nilai investasi saya turun sama sekali, keuntungan stabil lebih utama)\n
+              b. Moderat (Saya siap menerima sedikit fluktuasi untuk potensi keuntungan yang lebih tinggi)\n
               c. Agresif (Saya siap mengambil risiko tinggi untuk potensi keuntungan maksimal)"
         
         LANGKAH 2: Analisis dan Penggunaan Tools.
