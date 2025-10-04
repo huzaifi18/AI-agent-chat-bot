@@ -337,7 +337,7 @@ for msg in st.session_state.messages:
 
 # --- 6. Input Pengguna dan Interaksi dengan Agent ---
 
-prompt = st.chat_input("Coba disapa dong AI Agent-nya...")
+prompt = st.chat_input("Yuk Ngobrol!")
 
 if prompt:
     # Tambahkan dan tampilkan pesan pengguna
