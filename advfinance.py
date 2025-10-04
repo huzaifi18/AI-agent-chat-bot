@@ -35,9 +35,7 @@ st.caption("Chatbot untuk membantu Anda merencanakan investasi berdasarkan profi
 
 with st.sidebar:
     st.subheader("Menu")
-    st.markdown("""
-    Aplikasi ini ditenagai oleh **Google Gemini** dan **Exa Search**. 
-    
+    st.markdown("""    
     Cukup mulai percakapan untuk mendapatkan analisis investasi pribadi Anda.
     """)
     
