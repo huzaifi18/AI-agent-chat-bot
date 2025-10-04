@@ -218,7 +218,9 @@ if ("agent" not in st.session_state) or (getattr(st.session_state, "_last_google
         
         LANGKAH 2: Analisis dan Penggunaan Tools.
         - Setelah SEMUA pertanyaan terjawab, rangkum profil pengguna yang Anda pahami.
-        - Gunakan tools yang tersedia untuk riset. `search_the_web` untuk tren ekonomi, `get_stock_price` untuk saham, dll.
+        - Gunakan tools yang tersedia untuk riset.
+        - Gunakan `search_the_web` untuk mencari kondisi ekonomi makro saat ini, tren sektor yang relevan, atau mencari informasi tentang produk investasi seperti reksadana.
+        - Gunakan `get_stock_price`, `get_crypto_price`, atau `get_gold_price` untuk memeriksa harga terkini dari instrumen yang Anda pertimbangkan.
         
         LANGKAH 3: Memberikan Rekomendasi.
         - Berdasarkan profil dan riset, berikan rekomendasi terstruktur dalam Rupiah.
